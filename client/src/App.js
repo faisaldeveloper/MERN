@@ -34,7 +34,7 @@ function App() {
 
   return (
     <div className="App">
-
+      <h3>Users List</h3>
        {/* Show list of users */}
       <Table striped bordered hover>
             <thead>
@@ -61,6 +61,7 @@ function App() {
         
 
       {/* Add new user code */}
+      <h3>Add new user</h3>
       <div>
         <input
           type="text"
