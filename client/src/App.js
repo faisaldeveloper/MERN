@@ -2,6 +2,8 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import Axios from "axios";
 import Table from 'react-bootstrap/Table'; //Also import in index.js file: import 'bootstrap/dist/css/bootstrap.css';
+import Navbar from "./components/navbar";
+import Footer from "./components/footer"
 
 function App() {
   const [listOfUsers, setListOfUsers] = useState([]);
@@ -34,6 +36,7 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
       <h3>Users List</h3>
        {/* Show list of users */}
       <Table striped bordered hover>
@@ -61,31 +64,38 @@ function App() {
         
 
       {/* Add new user code */}
-      <h3>Add new user</h3>
-      <div>
+      <h3>Add New User</h3>
+      <div className="input-group m-2 px-4">        
         <input
           type="text"
+          className="form-control form-control-sm rounded m-1"
           placeholder="Name..."
           onChange={(event) => {
             setName(event.target.value);
           }}
-        />
+        />        
+        
         <input
           type="number"
+          className="form-control form-control-sm rounded m-1"
           placeholder="Age..."
           onChange={(event) => {
             setAge(event.target.value);
           }}
         />
+    
         <input
           type="text"
+          className="form-control form-control-sm rounded m-1"
           placeholder="Username..."
           onChange={(event) => {
             setUsername(event.target.value);
           }}
-        />
-        <button onClick={createUser}> Create User </button>
-      </div>
+        />          
+      </div>      
+        <button className="btn btn-primary" onClick={createUser}> Create User </button>
+        <hr />
+     <Footer />
     </div>
   );
 }
