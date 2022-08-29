@@ -34,8 +34,11 @@ return (
             <li className="nav-item">
               <Link to="/" className="nav-link">Dashboard</Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link to="/users" className="nav-link">Users</Link>              
+            </li> */}
+            <li className="nav-item">
+              <Link to="/remote-users" className="nav-link">Remote Users</Link>              
             </li>
             <li className="nav-item">
               <Link to="/about" className="nav-link">About</Link>              

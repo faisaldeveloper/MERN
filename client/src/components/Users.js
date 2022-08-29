@@ -38,7 +38,7 @@ function Users() {
 
   return (
     <div className="App">
-      <h3>Users List</h3>
+      <h3>Users List (Copy of Dashboard)</h3>
        {/* Show list of users */}
       <Table striped bordered hover>
             <thead>
